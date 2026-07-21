@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mise — One dinner worth cooking, every Thursday</title>
+<meta name="description" content="A single weeknight dinner in your inbox every Thursday. Tested, doable, with the shopping list done for you. Stop deciding what to cook — start looking forward to it." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="wrap">
+    <nav>
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <path d="M14 3c-3 0-5 2-5 5v3H7a2 2 0 00-2 2c0 5 3 9 7 10v2h4v-2c4-1 7-5 7-10a2 2 0 00-2-2h-2V8c0-3-2-5-5-5z" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          <path d="M14 8v6" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        Mise
+      </div>
+      <div class="nav-right">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-btn" data-lang="en" aria-label="English"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="ukc"><rect width="60" height="30"/></clipPath><g clip-path="url(#ukc)"><rect width="60" height="30" fill="#012169"/><path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M30,0 V30M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30M0,15 H60" stroke="#C8102E" stroke-width="6"/></g></svg><span>EN</span></button>
+          <button type="button" class="lang-btn" data-lang="es" aria-label="Español"><svg class="flag" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#AA151B"/><rect y="10" width="60" height="20" fill="#F1BF00"/></svg><span>ES</span></button>
+        </div>
+        <div class="nav-social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 9H16V6h-2.5C11.6 6 10 7.6 10 9.5V11H8v3h2v6h3v-6h2.2l.4-3H13v-1.3c0-.4.3-.7.7-.7z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2 1.6 3.6 3.6 3.9V9.6c-1.3 0-2.6-.4-3.6-1.1v5.9c0 3-2.4 5.4-5.4 5.4S5.2 17.4 5.2 14.4 7.6 9 10.6 9c.3 0 .6 0 .9.1v2.8c-.3-.1-.6-.2-.9-.2-1.4 0-2.6 1.1-2.6 2.6s1.2 2.6 2.6 2.6 2.6-1.1 2.6-2.6V3H16z"/></svg></a>
+      </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow" data-i18n="hero_eyebrow">One recipe · every Thursday</span>
+        <h1 data-i18n-html="hero_h1">Stop deciding <span class="u">what's for dinner.</span></h1>
+        <p class="lede" data-i18n="hero_lede">Every Thursday we send one dinner worth cooking — tested until it works, with the shopping list already done. You just cook.</p>
+
+        <form class="signup" id="signup" novalidate>
+          <div class="signup-row">
+            <input type="email" id="email" placeholder="you@email.com" aria-label="Email address" required />
+            <button class="cta" type="submit" data-i18n="cta">Join the Newsletter</button>
+          </div>
+          <div class="signup-success" role="status">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <span data-i18n="hero_success">You're in. Your first dinner arrives Thursday.</span>
+          </div>
+        </form>
+        <p class="signup-note" data-i18n="signup_note">Free. One email a week. No spam, ever.</p>
+      </div>
+
+      <!-- HERO VISUAL: photo + floating recipe card -->
+      <div class="hero-visual">
+        <div class="photo-zone photo-hero">
+          <!-- SWAP: put your photo at public/hero.jpg (Unsplash search: "noodles bowl") -->
+          <img src="public/hero.jpg" alt="Miso-butter noodles with charred greens" onerror="this.style.display='none'">
+          <span class="ph-hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="3.4"/><path d="M8 4l1.5-2h5L16 4"/></svg>
+            public/hero.jpg<br>Unsplash: "noodles bowl"
+          </span>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="label" data-i18n="card_label">This Thursday</span>
+            <span class="day">◆ Nº 62</span>
+          </div>
+          <div class="dish"><h3 data-i18n="dish">Miso-butter noodles with charred greens</h3></div>
+          <div class="specs">
+            <div class="spec"><div class="n">25<span style="font-size:0.7rem"> min</span></div><div class="k" data-i18n="spec_plate">To plate</div></div>
+            <div class="spec"><div class="n">2</div><div class="k" data-i18n="spec_serv">Servings</div></div>
+            <div class="spec"><div class="n">1</div><div class="k" data-i18n="spec_pan">Pan</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== BENEFITS ===== -->
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="ben_eyebrow">Why subscribe</span>
+        <h2 data-i18n="ben_h2">Dinner, decided for you.</h2>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit reveal">
+          <div class="idx">01</div>
+          <h3 data-i18n="ben1_h3">No more 6pm panic</h3>
+          <p data-i18n="ben1_p">The hardest part of dinner is deciding. We make that call for you once a week, so you open the fridge with a plan instead of a question.</p>
+        </div>
+        <div class="benefit reveal">
+          <div class="idx">02</div>
+          <h3 data-i18n="ben2_h3">The list is already made</h3>
+          <p data-i18n="ben2_p">Every recipe comes with a tidy shopping list grouped by aisle. Screenshot it, shop it, done. Nothing you'll use once and leave to rot.</p>
+        </div>
+        <div class="benefit reveal">
+          <div class="idx">03</div>
+          <h3 data-i18n="ben3_h3">It actually works</h3>
+          <p data-i18n="ben3_p">We cook each one until it's foolproof on a weeknight — real timings, real substitutions, no vague "season to taste" hand-waving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SAMPLE ISSUE ===== -->
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="sam_eyebrow">A recent issue</span>
+        <h2 data-i18n="sam_h2">Here's what lands in your inbox.</h2>
+      </div>
+      <article class="issue reveal">
+        <div class="photo-zone issue-photo">
+          <!-- SWAP: put your photo at public/sample.jpg (Unsplash search: "white beans skillet") -->
+          <img src="public/sample.jpg" alt="Crispy white beans with lemon and garlic" onerror="this.style.display='none'">
+          <span class="ph-hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="3.4"/><path d="M8 4l1.5-2h5L16 4"/></svg>
+            public/sample.jpg<br>Unsplash: "white beans skillet"
+          </span>
+        </div>
+        <div class="issue-main">
+          <div class="from" data-i18n="sam_from">From Mise · Nº 61</div>
+          <h3 data-i18n="sam_h3">Crispy white beans with lemon &amp; garlic</h3>
+          <p data-i18n="sam_p">This is the one I cook when I've got nothing left in me. Beans crisp up in a hot pan while the garlic goes golden, then everything gets a squeeze of lemon and a fistful of whatever green is wilting in the drawer. Ten real minutes of work.</p>
+          <div class="list" data-i18n-html="sam_list">
+            <b>SHOPPING LIST</b><br>
+            2 cans white beans · 1 lemon<br>
+            4 garlic cloves · chili flakes<br>
+            1 bunch greens · good olive oil
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CLOSING ===== -->
+  <section class="block closing">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">★★★★★</span>
+        <p class="quote" data-i18n="quote">"I haven't googled 'easy dinner' once since I subscribed."</p>
+        <p class="quote-by" data-i18n="quote_by">— MARCO T., SUBSCRIBER SINCE Nº 9</p>
+      </div>
+
+      <form class="signup reveal" id="signup2" novalidate>
+        <div class="signup-row">
+          <input type="email" id="email2" placeholder="you@email.com" aria-label="Email address" required />
+          <button class="cta" type="submit" data-i18n="cta">Join the Newsletter</button>
+        </div>
+        <div class="signup-success" role="status">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span data-i18n="hero_success2">You're in. First dinner lands Thursday.</span>
+        </div>
+      </form>
+      <p class="subcount reveal" data-i18n-html="subcount">Joining <b>9,800+</b> home cooks who kicked the "what's for dinner" habit.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="wrap foot-inner">
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <path d="M14 3c-3 0-5 2-5 5v3H7a2 2 0 00-2 2c0 5 3 9 7 10v2h4v-2c4-1 7-5 7-10a2 2 0 00-2-2h-2V8c0-3-2-5-5-5z" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          <path d="M14 8v6" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        Mise
+      </div>
+      <div class="foot-social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 9H16V6h-2.5C11.6 6 10 7.6 10 9.5V11H8v3h2v6h3v-6h2.2l.4-3H13v-1.3c0-.4.3-.7.7-.7z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2 1.6 3.6 3.6 3.9V9.6c-1.3 0-2.6-.4-3.6-1.1v5.9c0 3-2.4 5.4-5.4 5.4S5.2 17.4 5.2 14.4 7.6 9 10.6 9c.3 0 .6 0 .9.1v2.8c-.3-.1-.6-.2-.9-.2-1.4 0-2.6 1.1-2.6 2.6s1.2 2.6 2.6 2.6 2.6-1.1 2.6-2.6V3H16z"/></svg></a>
+      </div>
+      <div class="foot-copy" data-i18n="foot_copy">© 2026 Mise · A weekly cooking letter</div>
+    </div>
+  </footer>
+
+<script>
+  function wireForm(id) {
+    const form = document.getElementById(id);
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const input = form.querySelector("input[type=email]");
+      if (!input.value || !input.validity.valid) { input.focus(); return; }
+      form.classList.add("done");
+    });
+  }
+  wireForm("signup");
+  wireForm("signup2");
+
+  (function () {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const els = document.querySelectorAll(".reveal");
+    if (reduce || !("IntersectionObserver" in window)) { els.forEach(el => el.classList.add("in")); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: 0.15 });
+    els.forEach(el => io.observe(el));
+  })();
+</script>
+<script>
+(function () {
+  const dict = {"en": {"doc_title": "Mise — One dinner worth cooking, every Thursday", "hero_eyebrow": "One recipe · every Thursday", "hero_h1": "Stop deciding <span class=\"u\">what's for dinner.</span>", "hero_lede": "Every Thursday we send one dinner worth cooking — tested until it works, with the shopping list already done. You just cook.", "cta": "Join the Newsletter", "hero_success": "You're in. Your first dinner arrives Thursday.", "hero_success2": "You're in. First dinner lands Thursday.", "signup_note": "Free. One email a week. No spam, ever.", "card_label": "This Thursday", "dish": "Miso-butter noodles with charred greens", "spec_plate": "To plate", "spec_serv": "Servings", "spec_pan": "Pan", "ben_eyebrow": "Why subscribe", "ben_h2": "Dinner, decided for you.", "ben1_h3": "No more 6pm panic", "ben1_p": "The hardest part of dinner is deciding. We make that call for you once a week, so you open the fridge with a plan instead of a question.", "ben2_h3": "The list is already made", "ben2_p": "Every recipe comes with a tidy shopping list grouped by aisle. Screenshot it, shop it, done. Nothing you'll use once and leave to rot.", "ben3_h3": "It actually works", "ben3_p": "We cook each one until it's foolproof on a weeknight — real timings, real substitutions, no vague \"season to taste\" hand-waving.", "sam_eyebrow": "A recent issue", "sam_h2": "Here's what lands in your inbox.", "sam_from": "From Mise · Nº 61", "sam_h3": "Crispy white beans with lemon & garlic", "sam_p": "This is the one I cook when I've got nothing left in me. Beans crisp up in a hot pan while the garlic goes golden, then everything gets a squeeze of lemon and a fistful of whatever green is wilting in the drawer. Ten real minutes of work.", "sam_list": "<b>SHOPPING LIST</b><br>2 cans white beans · 1 lemon<br>4 garlic cloves · chili flakes<br>1 bunch greens · good olive oil", "quote": "\"I haven't googled 'easy dinner' once since I subscribed.\"", "quote_by": "— MARCO T., SUBSCRIBER SINCE Nº 9", "subcount": "Joining <b>9,800+</b> home cooks who kicked the \"what's for dinner\" habit.", "foot_copy": "© 2026 Mise · A weekly cooking letter"}, "es": {"doc_title": "Mise — Una cena que vale la pena, cada jueves", "hero_eyebrow": "Una receta · cada jueves", "hero_h1": "Dejá de pensar <span class=\"u\">qué cocinar hoy.</span>", "hero_lede": "Cada jueves te enviamos una cena que vale la pena cocinar — probada hasta que sale bien, con la lista de compras ya hecha. Vos solo cocinás.", "cta": "Unirme al newsletter", "hero_success": "¡Listo! Tu primera cena llega el jueves.", "hero_success2": "¡Listo! La primera cena llega el jueves.", "signup_note": "Gratis. Un email por semana. Sin spam, nunca.", "card_label": "Este jueves", "dish": "Fideos con manteca de miso y verdes salteados", "spec_plate": "Al plato", "spec_serv": "Porciones", "spec_pan": "Sartén", "ben_eyebrow": "Por qué suscribirte", "ben_h2": "La cena, decidida por vos.", "ben1_h3": "Se acabó el pánico de las 6", "ben1_p": "Lo más difícil de la cena es decidir. Esa decisión la tomamos por vos una vez por semana, así abrís la heladera con un plan en vez de una pregunta.", "ben2_h3": "La lista ya está hecha", "ben2_p": "Cada receta viene con una lista de compras ordenada por sector. Le sacás una captura, comprás, listo. Nada que uses una vez y quede pudriéndose en la heladera.", "ben3_h3": "De verdad funciona", "ben3_p": "Cocinamos cada una hasta que es infalible un día de semana — tiempos reales, reemplazos reales, sin vueltas del tipo 'condimentar a gusto'.", "sam_eyebrow": "Un número reciente", "sam_h2": "Esto es lo que llega a tu bandeja.", "sam_from": "De Mise · Nº 61", "sam_h3": "Porotos blancos crocantes con limón y ajo", "sam_p": "Esta es la que cocino cuando no me queda nada de energía. Los porotos se doran en la sartén caliente mientras el ajo toma color, y al final va un chorro de limón y un puñado de lo verde que se esté marchitando en el cajón. Diez minutos reales de trabajo.", "sam_list": "<b>LISTA DE COMPRAS</b><br>2 latas de porotos blancos · 1 limón<br>4 dientes de ajo · ají molido<br>1 atado de verdes · buen aceite de oliva", "quote": "\"No busqué en Google 'cena fácil' ni una vez desde que me suscribí.\"", "quote_by": "— MARCO T., SUSCRIPTO DESDE EL Nº 9", "subcount": "Sumate a <b>9.800+</b> cocineros que dejaron atrás el \"¿qué hago de cenar?\".", "foot_copy": "© 2026 Mise · Un newsletter semanal de cocina"}};
+  function apply(lang) {
+    const t = dict[lang]; if (!t) return;
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      const k = el.getAttribute("data-i18n");
+      if (t[k] != null) el.textContent = t[k];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      const k = el.getAttribute("data-i18n-html");
+      if (t[k] != null) el.innerHTML = t[k];
+    });
+    document.querySelectorAll(".lang-btn").forEach(function (b) {
+      b.classList.toggle("active", b.dataset.lang === lang);
+      b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false");
+    });
+    if (t.doc_title) document.title = t.doc_title;
+  }
+  const pref = (navigator.language || "en").toLowerCase();
+  apply(pref.indexOf("es") === 0 ? "es" : "en");
+  document.querySelectorAll(".lang-btn").forEach(function (b) {
+    b.addEventListener("click", function () { apply(b.dataset.lang); });
+  });
+})();
+</script>
+</body>
+</html>
